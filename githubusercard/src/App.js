@@ -16,9 +16,16 @@ class App extends Component {
   }
 
   componentDidMount(){
+    // request user data
     axios.get(`${baseUrl}dtebo`)
       .then(resp => {
         console.log('axios success: ', resp);
+
+        // add the user data to state
+        this.setState({
+          ...this.state.userdata,
+          userdata: resp.data
+        });
       })
       .catch(err => {
         console.log('axios error: ', err);
