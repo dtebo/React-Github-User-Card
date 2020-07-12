@@ -1,15 +1,17 @@
 import {
     Button,
     Card,
-    CardBody,
     CardHeader,
-    CardText
+    CardContent,
+    Typography,
+    Avatar
 } from '@material-ui/core';
 
 export {
     Button,
     Card,
-    CardBody,
     CardHeader,
-    CardText
+    CardContent,
+    Typography,
+    Avatar
 }
