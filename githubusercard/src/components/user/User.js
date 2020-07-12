@@ -12,6 +12,7 @@ const User = (props) => {
             <MUI.CardHeader 
                 avatar={
                     <MUI.Avatar aria-label='user avatar'
+                        className={classes.largeAvatar}
                         alt='user avatar'
                         src={props.user.avatar_url}
                     />
@@ -33,6 +34,7 @@ const User = (props) => {
             <MUI.CardContent>
                 <MUI.Typography variant='h4'
                     component='h4'
+                    className={classes.sectiontitle}
                 >
                     Followers
                 </MUI.Typography>

@@ -1,5 +1,11 @@
 .follower-container{
     display: flex;
     justify-content: space-evenly;
-    margin: 10px 0;
+    margin: 15px 0;
+}
+
+.follower-info{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
 }

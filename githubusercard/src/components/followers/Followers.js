@@ -31,9 +31,18 @@ class Followers extends Component{
         return (
             <div className='follower-container'>
                 {this.state.followers && this.state.followers.map((follower) => {
-                   return <MUI.Avatar src={follower.avatar_url}
-                            key={follower.id}
-                         />
+                   return (
+                       <section className='follower-info'>
+                           <MUI.Avatar src={follower.avatar_url}
+                                key={follower.id}
+                                alt={follower.login}
+                                title={follower.login}
+                            />
+                            <MUI.Typography>
+                                {follower.login}
+                            </MUI.Typography>
+                       </section>
+                    );
                 })}
             </div>
         );
