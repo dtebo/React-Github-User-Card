@@ -2,24 +2,16 @@ import React, {Component} from 'react';
 
 class User extends Component{
     constructor(props){
-        super();
-        this.state = {
-            userdata: props.user
-        };
+        super(props);
     }
 
     componentDidMount(){
-        this.setState({
-            ...this.state.userdata,
-            userdata: this.props.user
-        });
-
-        console.log('from user: ', this.state);
+        console.log('from user: ', this.props.user);
     }
 
     render(){
         return (
-            <h1>{this.state.userdata}</h1>
+            <h1>{this.props.user.login}</h1>
         );
     }
 }
