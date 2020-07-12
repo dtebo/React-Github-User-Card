@@ -2,6 +2,8 @@ import React from 'react';
 
 import * as MUI from '../../materialui/index';
 
+import Followers from '../followers/Followers';
+
 const User = (props) => {
     const classes = MUI.useStyles();
 
@@ -29,7 +31,12 @@ const User = (props) => {
             >
             </MUI.CardHeader>
             <MUI.CardContent>
-                
+                <MUI.Typography variant='h4'
+                    component='h4'
+                >
+                    Followers
+                </MUI.Typography>
+                <Followers />
             </MUI.CardContent>
         </MUI.Card>
     );
