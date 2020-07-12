@@ -3,6 +3,8 @@ import axios from 'axios';
 
 import * as MUI from '../../materialui/index';
 
+import './Followers.css';
+
 class Followers extends Component{
     constructor(props){
         super(props);
@@ -27,13 +29,13 @@ class Followers extends Component{
 
     render(){
         return (
-            <>
+            <div className='follower-container'>
                 {this.state.followers && this.state.followers.map((follower) => {
                    return <MUI.Avatar src={follower.avatar_url}
                             key={follower.id}
                          />
                 })}
-            </>
+            </div>
         );
     }
 }
