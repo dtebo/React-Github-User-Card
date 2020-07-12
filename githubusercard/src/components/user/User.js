@@ -36,7 +36,7 @@ const User = (props) => {
                 >
                     Followers
                 </MUI.Typography>
-                <Followers user={props.user}/>
+                {props.user && <Followers username={props.user.login} />}
             </MUI.CardContent>
         </MUI.Card>
     );
