@@ -6,6 +6,8 @@ import {
     CardHeader,
     CardContent,
     Typography,
+    TextField,
+    InputAdornment,
     Avatar
 } from '@material-ui/core';
 
@@ -15,6 +17,8 @@ export {
     CardHeader,
     CardContent,
     Typography,
+    TextField,
+    InputAdornment,
     Avatar,
     useStyles
 }
