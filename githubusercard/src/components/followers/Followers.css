@@ -9,3 +9,12 @@
     flex-direction: column;
     align-items: center;
 }
+
+.follower-info .MuiAvatar-circle{
+    transition: all .2s linear;
+}
+
+.follower-info .MuiAvatar-circle:hover{
+    height: 50px;
+    width: 50px;
+}

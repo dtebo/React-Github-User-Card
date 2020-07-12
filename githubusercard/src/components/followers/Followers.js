@@ -14,7 +14,7 @@ class Followers extends Component{
     }
 
     componentDidMount(){
-        axios.get(`https://api.github.com/users/dtebo/followers`)
+        axios.get(`https://api.github.com/users/${this.props.username}/followers`)
             .then((resp) => {
                 console.log(resp);
                 this.setState({
