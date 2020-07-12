@@ -1,3 +1,5 @@
+import useStyles from './useStyles';
+
 import {
     Button,
     Card,
@@ -13,5 +15,6 @@ export {
     CardHeader,
     CardContent,
     Typography,
-    Avatar
+    Avatar,
+    useStyles
 }
