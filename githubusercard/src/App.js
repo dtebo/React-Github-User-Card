@@ -3,6 +3,7 @@ import axios from 'axios';
 import './App.css';
 
 import Header from './components/header/Header';
+import User from './components/user/User';
 
 let baseUrl = 'https://api.github.com/users/';
 
@@ -38,6 +39,7 @@ class App extends Component {
     return (
       <div className="App">
         <Header />
+        <User user={this.state.userdata} />
       </div>
     );
   }
