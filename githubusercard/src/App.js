@@ -26,6 +26,8 @@ class App extends Component {
           ...this.state.userdata,
           userdata: resp.data
         });
+
+        console.log('state: ', this.state);
       })
       .catch(err => {
         console.log('axios error: ', err);

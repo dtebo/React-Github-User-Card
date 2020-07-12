@@ -3,7 +3,12 @@ import React from 'react';
 const Header = props => {
     return (
         <div className='header'>
-            <h1>Header....</h1>
+            <div className='logo'>
+                <h1>HubData</h1>
+            </div>
+            <section className='nav'>
+
+            </section>
         </div>
     );
 };
