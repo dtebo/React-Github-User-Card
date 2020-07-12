@@ -1,14 +1,16 @@
 import React from 'react';
 
+import NavigationMenu from './navigation/NavigationMenu';
+
+import './Header.css';
+
 const Header = props => {
     return (
         <div className='header'>
-            <div className='logo'>
+            <section className='logo'>
                 <h1>HubData</h1>
-            </div>
-            <section className='nav'>
-
             </section>
+            <NavigationMenu className='nav' />
         </div>
     );
 };
