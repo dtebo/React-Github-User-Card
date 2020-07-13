@@ -1,6 +1,7 @@
 .follower-container{
     display: flex;
     justify-content: space-evenly;
+    flex-wrap: wrap;
     margin: 15px 0;
 }
 

@@ -12,33 +12,45 @@ class App extends Component {
     super();
 
     this.state = {
+      mounted: false,
       userdata: ''
     }
   }
 
-  componentDidMount(){
-    // request user data
-    axios.get(`${baseUrl}dtebo`)
+  getSearch = (s) => {
+    if(this.state.mounted){
+      this.getUserData(s);
+    }
+  }
+
+  getUserData = (username) => {
+    axios.get(`${baseUrl}${username}`)
       .then(resp => {
         console.log('axios success: ', resp);
 
         // add the user data to state
         this.setState({
-          ...this.state.userdata,
           userdata: resp.data
         });
-
-        console.log('state: ', this.state);
       })
       .catch(err => {
         console.log('axios error: ', err);
       });
   }
 
+  componentDidMount(){
+    this.setState({
+      mounted: true
+    });
+
+    // request user data
+    this.getUserData('dtebo');
+  }
+
   render(){
     return (
       <div className="App">
-        <Header />
+        {this.state && <Header getSearch={this.getSearch} />}
         <User user={this.state.userdata} />
       </div>
     );

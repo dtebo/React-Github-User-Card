@@ -13,12 +13,11 @@ class Followers extends Component{
         };
     }
 
-    componentDidMount(){
-        axios.get(`https://api.github.com/users/${this.props.username}/followers`)
+    getFollowers(user){
+        axios.get(`https://api.github.com/users/${user}/followers`)
             .then((resp) => {
                 console.log(resp);
                 this.setState({
-                    ...this.state.followers,
                     followers: resp.data
                 });
             })
@@ -27,14 +26,23 @@ class Followers extends Component{
             });
     }
 
+    componentDidMount(){
+        this.getFollowers(this.props.username);
+    }
+
+    componentDidUpdate(prevProps){
+        if(this.props.username !== prevProps.username){
+            this.getFollowers(this.props.username);
+        }
+    }
+
     render(){
         return (
             <div className='follower-container'>
                 {this.state.followers && this.state.followers.map((follower) => {
                    return (
-                       <section className='follower-info'>
+                       <section key={follower.id} className='follower-info'>
                            <MUI.Avatar src={follower.avatar_url}
-                                key={follower.id}
                                 alt={follower.login}
                                 title={follower.login}
                             />
