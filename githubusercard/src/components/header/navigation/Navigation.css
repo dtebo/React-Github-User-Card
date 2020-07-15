@@ -1,0 +1,15 @@
+.site-nav{
+    padding-top: 10px;
+}
+
+nav a{
+    display: inline-block;
+    text-decoration: none;
+    padding: 10px;
+    font-size: 1.3rem;
+    font-weight: bold;
+}
+
+nav a:hover{
+    color: #75bcbe;
+}
